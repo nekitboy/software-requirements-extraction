@@ -54542,10 +54542,11 @@ var SentenceResult = function (props) {
     return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: _SentenceResult_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.Container, tabIndex: 0 },
         (sentences === null || sentences === void 0 ? void 0 : sentences.length) === 0 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_blueprintjs_core__WEBPACK_IMPORTED_MODULE_2__["H4"], null, "No sentences parsed"),
         filteredSenteces.map(function (item, i) {
+            var _a;
             return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { key: i, className: item.label === 1 ? _SentenceResult_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.Good : _SentenceResult_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.Bad },
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: _SentenceResult_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.Info },
                     item.label === 1 ? (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_blueprintjs_core__WEBPACK_IMPORTED_MODULE_2__["Icon"], { icon: 'small-tick', intent: 'success' })) : (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_blueprintjs_core__WEBPACK_IMPORTED_MODULE_2__["Icon"], { icon: 'small-cross', intent: 'danger' })),
-                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: _SentenceResult_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.Score }, item.score[item.label].toFixed(2))),
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: _SentenceResult_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.Score }, ((_a = item.score[item.label === 1 ? 1 : 0]) === null || _a === void 0 ? void 0 : _a.toFixed(2)) || '')),
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, item.sentence)));
         })));
 };
