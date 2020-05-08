@@ -54441,7 +54441,9 @@ var SentenceTransformer = function () {
                     _b.label = 1;
                 case 1:
                     _b.trys.push([1, 5, , 6]);
-                    return [4 /*yield*/, fetch(_config_config__WEBPACK_IMPORTED_MODULE_4__["API_URL"] + "/find?text=" + text, {
+                    return [4 /*yield*/, fetch(_config_config__WEBPACK_IMPORTED_MODULE_4__["API_URL"] + "/find", {
+                            method: 'POST',
+                            body: text,
                             signal: abortProcessController.current.signal
                         })];
                 case 2:
@@ -54544,11 +54546,12 @@ var SentenceResult = function (props) {
         filteredSenteces.map(function (item, i) {
             var _a, _b;
             return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { key: i },
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: _SentenceResult_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.Info },
-                    item.label === 1 ? (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_blueprintjs_core__WEBPACK_IMPORTED_MODULE_2__["Icon"], { icon: 'small-tick', intent: 'success' })) : (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_blueprintjs_core__WEBPACK_IMPORTED_MODULE_2__["Icon"], { icon: 'small-tick', intent: 'none' })),
-                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: _SentenceResult_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.Score + " " + (item.label === 1 ? _SentenceResult_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.Good : '') }, ((_a = item.score[1]) === null || _a === void 0 ? void 0 : _a.toFixed(2)) || ''),
-                    item.label !== 1 ? (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_blueprintjs_core__WEBPACK_IMPORTED_MODULE_2__["Icon"], { icon: 'small-cross', intent: 'danger' })) : (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_blueprintjs_core__WEBPACK_IMPORTED_MODULE_2__["Icon"], { icon: 'small-cross', intent: 'none' })),
-                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: _SentenceResult_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.Score + " " + (item.label !== 1 ? _SentenceResult_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.Bad : '') }, ((_b = item.score[0]) === null || _b === void 0 ? void 0 : _b.toFixed(2)) || '')),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_blueprintjs_core__WEBPACK_IMPORTED_MODULE_2__["Tooltip"], { content: item.label === 1 ? 'Is not software requirement' : 'Is software requirement', position: _blueprintjs_core__WEBPACK_IMPORTED_MODULE_2__["Position"].TOP },
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: _SentenceResult_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.Info },
+                        item.label === 1 ? (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_blueprintjs_core__WEBPACK_IMPORTED_MODULE_2__["Icon"], { icon: 'small-tick', intent: 'success' })) : (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_blueprintjs_core__WEBPACK_IMPORTED_MODULE_2__["Icon"], { icon: 'small-tick', intent: 'none' })),
+                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: _SentenceResult_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.Score + " " + (item.label === 1 ? _SentenceResult_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.Good : '') }, ((_a = item.score[1]) === null || _a === void 0 ? void 0 : _a.toFixed(2)) || ''),
+                        item.label !== 1 ? (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_blueprintjs_core__WEBPACK_IMPORTED_MODULE_2__["Icon"], { icon: 'small-cross', intent: 'danger' })) : (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_blueprintjs_core__WEBPACK_IMPORTED_MODULE_2__["Icon"], { icon: 'small-cross', intent: 'none' })),
+                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: _SentenceResult_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.Score + " " + (item.label !== 1 ? _SentenceResult_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.Bad : '') }, ((_b = item.score[0]) === null || _b === void 0 ? void 0 : _b.toFixed(2)) || ''))),
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, item.sentence)));
         })));
 };
