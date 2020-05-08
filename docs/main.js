@@ -54443,7 +54443,12 @@ var SentenceTransformer = function () {
                     _b.trys.push([1, 5, , 6]);
                     return [4 /*yield*/, fetch(_config_config__WEBPACK_IMPORTED_MODULE_4__["API_URL"] + "/find", {
                             method: 'POST',
-                            body: text,
+                            body: JSON.stringify({
+                                text: text
+                            }),
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
                             signal: abortProcessController.current.signal
                         })];
                 case 2:
