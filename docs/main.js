@@ -54570,7 +54570,7 @@ var SentenceResult = function (props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "API_URL", function() { return API_URL; });
-var API_URL = "https://localhost:8000" || false;
+var API_URL = "https://3469d71f.ngrok.io" || false;
 
 
 /***/ }),
